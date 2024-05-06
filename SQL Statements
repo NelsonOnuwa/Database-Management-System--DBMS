@@ -1,0 +1,100 @@
+--								MYSQL          
+                             ----------
+
+
+--                          1. SELECT STATEMENT   
+							 -------------------
+-- *The SELECT statement:     A.requests for data from a database(query a database- it is a query that return values) 
+--					          B.prints exactly what is in the ''(quote),this creates a row.
+--                                       n.b SELECT a; Gives a syntax error
+
+-- SELECT STATEMENT -  AS A PRINTER
+SELECT 'a';
+SELECT 'a,b';
+SELECT 'a''b';
+SELECT 'a,'',b';
+SELECT 'a '' b';
+SELECT 'a' 'b';
+SELECT 'ab';
+---                     compare line 35 without space and 38 with space
+
+
+SELECT 'name, age,sex';
+--                  NB. SELECT name, age,sex; Gives a syntax error. It only works when you have a database you want to query the fields from
+--                          E.g SELECT column1, column2, ... FROM table_name; -  2.SELECT STATEMENT - AS A QUERY
+
+SELECT 'name', 'age','sex';
+SELECT 'name,' 'age,' 'sex,';
+SELECT 'name''age''sex';
+
+--                        'AS' 1.CHANGES THE NAME,UPPER and LOWER CASE OF A COLUMN FIELD and
+--                             2.IT IS USED TO GIVE A COLUMN NAME.
+SELECT 'a' AS result;
+SELECT 'name, age,sex' AS result;
+
+SELECT 'name AS NAME, age AS AGE,sex AS SEX' ;
+SELECT 'name' AS NAME, 'age' AS AGE,'sex' AS SEX ;
+
+
+SELECT 'Prince' AS NAME, 'Six months' AS AGE,'Male' AS SEX ;
+SELECT 'Ogechi' AS Name, '24 years' AS Age,'FeMale' AS Sex;
+
+
+
+
+
+
+--                         2  INSERT STATEMENT 
+                             ------------------
+-- The INSERT Synthax :       INSERT INTO DATABASE(Colunmn1,Colunmn2,Colunmn3,Colunmn4...)
+--                            VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
+
+--                       3  UPDATE STATEMENT
+						  --------------------
+-- The UPDATE Synthax :      UPDATE DATABASE SET ADDRESS= 'WHITEWAY', ZIP='112',WHERE ID =4;
+
+--                       4  DELECT STATEMENT
+                           -------------------
+-- The DELECT Synthax :       DELECT FROM DATABASE WHERE ID=5;
+
+--                       
+
+
+--                                  CLAUSES
+--                               -----------
+                                  
+--                      1. 'FROM' CLAUSE
+--                            SELECT column1, column2, ... FROM table_name;       .....to select specific column(field names) of the table 
+--                            SELECT * FROM table_name;                           .....to select all the fields available in the table                                
+
+
+--                      2. 'WHERE' CLAUSE
+/* SELECT * FROM okoliefamily WHERE NAME = 'NELSON';                  --                It selects specific rows.
+SELECT * FROM okoliefamily WHERE NAME IS NULL;                     --                   lets us add selection criteria to a statement
+SELECT * FROM okoliefamily WHERE DATE_OF_BIRTH IS NULL;
+SELECT * FROM okoliefamily WHERE NAME IS NOT NULL;
+
+SELECT * FROM okoliefamily WHERE NAME = 'PRINCE';
+SELECT * FROM okoliefamily WHERE NAME = 5; */
+                       
+--                                 NULL IS NOT A VALUE, IT IS THE ABSENCE OF A VALUE
+--                                            e.g SELECT * FROM okoliefamily WHERE NAME = NULL; WILL NOT GIVE ANY VALUE
+--                                 MYSQL requires single quotes around Text values, however, Numeric fields should not be enclosed in quotes:					
+
+--                       3.  'ORDER BY'  CLAUSE
+
+--                                SELECT * FROM table_name    --         used to sort the result-set in ascending or descending order.
+--                                                                       It sorts the records in ascending order by default.
+--                                                                       To sort the records in descending order, use the DESC keyword.
+--                                ORDER BY column1;
+--                                            OR
+--                                ORDER BY column1 DESC;
+--                                            OR
+--                                ORDER BY column1, column2; This means that it orders by Colunm1,but if some rows have the same Colunm1, it orders them by Colunm2
+--                                            OR
+--                                ORDER BY column1 ASC, column2 DESC;
+
+
+
+--                       4.   'LIMIT' CLAUSE
+--                                Find out if MYSQL uses the LIMIT Clause cos it already has a limit tab.
