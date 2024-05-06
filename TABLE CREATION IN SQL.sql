@@ -1,3 +1,30 @@
+CREATING A TABLE IN MYSQL
+
+A database (schema) is first created before the table is created.
+Right click on the database and click on create schema (MYSQL)
+Name the schema (MYSQL)
+ You would find it below database on the left of the screen
+ Click on the schema, then right click on table, click on create table
+A new table tab pops up
+Name the table, fill the column names and the datatypes.
+You can also select your primary key here
+Click on the table name, click on the symbol I, this opens the table. go to ddl and copy the syntax and paste to create the table.
+
+
+
+--    CREATE TABLE table_name (
+--      Column 1 datatype,
+--      Column 2 datatype,
+--      Column 3 datatype,
+--      Column 4 datatype,
+--       ...
+--     );
+
+-- The table can now be filled with data using the MYSQL INSERT INTO Statement:
+               INSERT INTO DATABASE (Colunmn1, Colunmn2, Colunmn3, Colunmn4)
+                 VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
+
+
 
 
 CREATE TABLE `umuokolie` (
