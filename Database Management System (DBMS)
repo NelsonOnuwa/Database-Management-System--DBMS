@@ -12,7 +12,7 @@ Id	Name	City	State	zip
 1	Nelson	Ibusa	Delta	234
 2	Ogechi	Obazu	Imo	234
 3	Cupcake (Ikechukwu)	Ibusa	delta	234
-3 Records                              A relational database with one table
+Three Records                              A relational database with one table
 
 Fields (Column): maintains specific information about every record in a table
 Record (Row): each individual entry that exists in a table
