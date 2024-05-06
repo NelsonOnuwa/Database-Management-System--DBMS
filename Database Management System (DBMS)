@@ -1,6 +1,5 @@
-Database Management System (DBMS) 
-
 Database
+
 Database is a structure that stores information in an organized, consistent, reliable and searchable way.  It is either relational or non-relational. 
 Relational database focuses on organizing data into rows and columns within tables. E.g. MYSQL, SQL, Postgre SQL.
 Non-Relational (NOSQL) e.g. Mongo, Cassandra.
@@ -27,6 +26,7 @@ Advantage of storing data in a database rather than other traditional formats li
 
 
 Database Management System (DBMS)
+
 Database Management System (DBMS) is the software (a set of instructions that operate the hardware). It provides the services that are necessary for end users or other software to interact with the data. Examples of DBMS include MYSQL, SQL, and Access.
 Nb. MYSQL is a DBMS for relational databases (RDBMS)
 
@@ -43,15 +43,9 @@ Data has been stored in RDBMS format for years. The reasons behind it are as fol
 
 
 
-
-
-
-
-
-
-
-
 SQL (Structured Query Language)
+
+
 SQL is a standard language for accessing (storing and retrieving) and manipulating databases. It turns raw data stored in a database into actionable insights. 
 When we use SQL to work with data in existing tables that is SQL being used as a DML (Data Manipulation Language) – CRUD. 
 When we write SQL to make changes to the structure of tables or to the database that is SQL being used as a DDL (Data definition language).
@@ -79,7 +73,8 @@ E.g. SELECT * FROM okoliefamily WHERE Name = ‘prince’ ORDER BY;
 SQL keywords are NOT case sensitive: select is the same as SELECT. Always use single quotes ' ' in MySQL although double quotes ““works but not for all programs. 
 Table names and fields should be in lower cases.
 
-1.	SELECT (CREATE) STATEMENT   
+1.	SELECT (CREATE) STATEMENT  
+
 The SELECT statement:   
  Requests for data from a database (query a database- it is a query that return values) 
            Prints exactly what is in the ‘‘(quote), this creates a row.
@@ -99,13 +94,8 @@ The DELECT Syntax:       DELECT FROM DATABASE WHERE ID=5;
 
 
 
+CREATING A TABLE IN MYSQL
 
-
-
-
-
-
-                           CREATING A TABLE IN MYSQL
 A database (schema) is first created before the table is created.
 Right click on the database and click on create schema (MYSQL)
 Name the schema (MYSQL)
@@ -138,24 +128,8 @@ Click on the table name, click on the symbol I, this opens the table. go to ddl 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Schema
+
 Schema are the blue prints of databases. It shows a database design such as what tables are include in the database and any relationship btw its tables.  It lets one know what data type each field can hold.
 
 A key is one or more columns that are identified as such in the creation of a table. 
@@ -164,11 +138,11 @@ Primary key is used to ensure data in the specific column is unique (identifies 
 Foreign key is a column or group of columns in a relational database table that provides a link between data in two tables. It is a column (or columns) that references another column (most often the primary key) of another table.  For a foreign key to exist in one entity, it must be the primary key in a related entity.  The main requirement of foreign keys is the establishment of relationships between.  It makes sure that, data is linked across multiple tables and helps in storing and retrieving data. We need foreign keys as they help us make sure that data is consistent, complete between both the tables and overall accuracy is maintained (data integrity).
                    
 
-Primary Key	Foreign Key
-A primary key is used to ensure data in the specific column is unique.	A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.
-It does not allow NULL values.		It can also contain NULL values.
-Its value cannot be deleted from the parent table.	Its value can be deleted from the child table
-It uniquely identifies a record in the relational database table.	It refers to the field in a table, which is the primary key of another table.
+Primary Key	                                                                         Foreign Key
+A primary key is used to ensure data in the specific column is unique.       	A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.
+It does not allow NULL values.		                                        It can also contain NULL values.
+Its value cannot be deleted from the parent table.	                        Its value can be deleted from the child table
+It uniquely identifies a record in the relational database table.	        It refers to the field in a table, which is the primary key of another table.
 	
 
 
@@ -193,7 +167,8 @@ The following constraints are commonly used in SQL:
 7. CREATE INDEX - Used to create and retrieve data from the database very quickly.
 
 -Below is the constraint syntax:
-                        CREATE TABLE table_name (
+                       
+CREATE TABLE table_name (
 column1 datatype constraint,
 column2 datatype constraint,
  column3 datatype constraint,
