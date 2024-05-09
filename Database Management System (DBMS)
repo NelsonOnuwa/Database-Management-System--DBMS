@@ -18,7 +18,9 @@ Fields (Column): maintains specific information about every record in a table
 Record (Row): each individual entry that exists in a table
 Tables:  collection of closely related data
 
-Advantage of storing data in a database rather than other traditional formats like EXCEL                                                  (Why database and NOT Excel)
+
+
+Advantage of storing data in a database rather than other traditional formats like EXCEL (Why Database and NOT Excel)
     -- Many users can write queries to gather insight (an accurate and deep understanding) from the data at the same time
     -- When a database is queried, the data stored inside the database does not change rather the database info is accessed and presented according to the instruction in the query.
 
