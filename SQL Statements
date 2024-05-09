@@ -3,11 +3,13 @@
 
                      1. SELECT STATEMENT   
 			     
--- *The SELECT statement:     1. requests for data from a database(query a database- it is a query that return values) 
---		              2. prints exactly what is in the ''(quote), this creates a row.
---                                       n.b SELECT a; Gives a syntax error
+-- *The SELECT statement:     1. prints exactly what is in the ''(quote), this creates a row.
+                              2. requests for data from a database( Query a database- it is a query that return values) 
+--		              
+--                                       
 
-SELECT STATEMENT -  AS A PRINTER
+
+SELECT STATEMENT - 1.  AS A PRINTER
 
 SELECT 'a';
 SELECT 'a,b';
@@ -15,15 +17,16 @@ SELECT 'a''b';
 SELECT 'a,'',b';
 SELECT 'a '' b';
 SELECT 'a' 'b';
-SELECT 'ab';
+SELECT 'ab';                   Nb: SELECT a; Gives a syntax error
 
 
 
 SELECT 'name, age,sex';
-                            NB. SELECT name, age,sex; Gives a syntax error. 
-                            It only works when you have a database you want to query the fields from:
-                            E.g SELECT column1, column2, ... FROM table_name; -  2.SELECT STATEMENT - AS A QUERY
-
+                              Nb: SELECT name, age,sex; Gives a syntax error.
+                              It only works when you have a database you want to query the fields from:
+                              E.g SELECT column1, column2, ... FROM table_name; - See 2.SELECT STATEMENT - AS A QUERY
+                            
+                            
 
 
 SELECT 'name', 'age','sex';
@@ -60,17 +63,23 @@ SELECT 'Ogechi' AS Name, '24 years' AS Age,'Female' AS Gender;                  
 --                       
 
 
---                                  CLAUSES
---                               -----------
+SELECT STATEMENT - 2.  AS A QUERY
+
+
+--                             CLAUSES
+--                           -----------
                                   
 --                      1. 'FROM' CLAUSE
+
 --                            SELECT column1, column2, ... FROM table_name;       .....to select specific column(field names) of the table 
 --                            SELECT * FROM table_name;                           .....to select all the fields available in the table                                
 
 
 --                      2. 'WHERE' CLAUSE
-/* SELECT * FROM okoliefamily WHERE NAME = 'NELSON';                  --                It selects specific rows.
-SELECT * FROM okoliefamily WHERE NAME IS NULL;                     --                   lets us add selection criteria to a statement
+
+SELECT * FROM okoliefamily WHERE NAME = 'NELSON';                  --                selects specific rows.
+
+SELECT * FROM okoliefamily WHERE NAME IS NULL;                     --                lets us add selection criteria to a statement
 SELECT * FROM okoliefamily WHERE DATE_OF_BIRTH IS NULL;
 SELECT * FROM okoliefamily WHERE NAME IS NOT NULL;
 
