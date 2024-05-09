@@ -22,21 +22,23 @@ Tables:  collection of closely related data
 
 Advantage of storing data in a database rather than other traditional formats like EXCEL (Why Database and NOT Excel)
     -- Many users can write queries to gather insight (an accurate and deep understanding) from the data at the same time
-    -- When a database is queried, the data stored inside the database does not change rather the database info is accessed and presented according to the instruction in the query.
+    -- When a database is queried, the data stored inside the database does not change rather the database info is accessed and presented 
+       according to the instruction in the query.
 
 
 
 
 Database Management System (DBMS)
 
-Database Management System (DBMS) is the software (a set of instructions that operate the hardware). It provides the services that are necessary for end users or other software to interact with the data. Examples of DBMS include MYSQL, SQL, and Access.
+Database Management System (DBMS) is the software (a set of instructions that operate the hardware). 
+It provides the services that are necessary for end users or other software to interact with the data. Examples of DBMS include MYSQL, SQL, and Access.
 Nb. MYSQL is a DBMS for relational databases (RDBMS)
 
 Data has been stored in RDBMS format for years. The reasons behind it are as follows:
-	-- RDBMS is one of the safest ways to store, manage, and retrieve data.
-	-- They are backed by a solid mathematical foundation (relational algebra and calculus) and they expose an efficient and intuitive declarative language – SQL – for easy interaction.
-	-- Almost every language has a rich set of libraries to interact with different RDBMS and the tricks and methods of using them are well tested and well understood.
-	-- Scaling an RDBMS is a pretty well-understood task and there are a bunch of well trained, experienced professionals to do this job (DBA or database administrator).
+-- RDBMS is one of the safest ways to store, manage, and retrieve data.
+-- They are backed by a solid mathematical foundation (relational algebra and calculus) and they expose an efficient and intuitive declarative language – SQL – for easy interaction.
+-- Almost every language has a rich set of libraries to interact with different RDBMS and the tricks and methods of using them are well tested and well understood.
+-- Scaling an RDBMS is a pretty well-understood task and there are a bunch of well trained, experienced professionals to do this job (DBA or database administrator).
     
 
 
@@ -48,9 +50,12 @@ Data has been stored in RDBMS format for years. The reasons behind it are as fol
 SQL (Structured Query Language)
 
 
-SQL is a standard language for accessing (storing and retrieving) and manipulating databases. It turns raw data stored in a database into actionable insights. 
+SQL is a standard language for accessing (storing and retrieving) and manipulating databases. 
+It turns raw data stored in a database into actionable insights. 
+
 When we use SQL to work with data in existing tables that is SQL being used as a DML (Data Manipulation Language) – CRUD. 
 When we write SQL to make changes to the structure of tables or to the database that is SQL being used as a DDL (Data definition language).
+
 SQL became a standard of the American National Standards Institute (ANSI) in 1986 and of the International Organization for Standardization (ISO) in 1987
 
 SQL comments starts with either a (--) or a (/* */) for example:         
@@ -63,26 +68,33 @@ SQL comments starts with either a (--) or a (/* */) for example:
 To interact with the database, users employ SQL statements
                 
 
+
+
 SQL STATEMENTS
-The basic SQL statements are CRUD:   CREATE (SELECT)
-                                                                    READ (INSERT)
+
+The basic SQL statements are CRUD:                      CREATE (SELECT)
+                                                        READ   (INSERT)
 		                                        UPDATE
 		                                        DELETE
 SQL statements contains clauses, expressions and it is terminated by a semicolon (;) 
 E.g. SELECT * FROM okoliefamily WHERE Name = ‘prince’ ORDER BY;
+The clauses are "FROM", "WHERE", "ORDER BY" While the expression is = 
 
- The clauses are "FROM", "WHERE", "ORDER BY" While the expression is = 
-SQL keywords are NOT case sensitive: select is the same as SELECT. Always use single quotes ' ' in MySQL although double quotes ““works but not for all programs. 
+SQL keywords are NOT case sensitive: select is the same as SELECT. 
+Always use single quotes ' ' in MySQL although double quotes" " works, but not for all programs. 
 Table names and fields should be in lower cases.
+
+
 
 1.	SELECT (CREATE) STATEMENT  
 
-The SELECT statement:   
- Requests for data from a database (query a database- it is a query that return values) 
-           Prints exactly what is in the ‘‘(quote), this creates a row.
+The SELECT statement requests for data from a database (query a database- it is a query that return values) 
+It prints exactly what is in the quote(' '), this creates a row.
+
 N.b SELECT a; gives a syntax error.
                 
- 2.  INSERT STATEMENT 
+
+2.  INSERT STATEMENT 
 The INSERT Syntax:             INSERT INTO DATABASE (Colunmn1, Colunmn2, Colunmn3, Colunmn4...)
                                                 VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
 
