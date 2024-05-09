@@ -1,14 +1,14 @@
---						MYSQL          
-                                            ----------
+					MYSQL          
+                                        
 
-
---                          1. SELECT STATEMENT   
-			     -------------------
+                     1. SELECT STATEMENT   
+			     
 -- *The SELECT statement:     1. requests for data from a database(query a database- it is a query that return values) 
---		              2. prints exactly what is in the ''(quote),this creates a row.
+--		              2. prints exactly what is in the ''(quote), this creates a row.
 --                                       n.b SELECT a; Gives a syntax error
 
--- SELECT STATEMENT -  AS A PRINTER
+SELECT STATEMENT -  AS A PRINTER
+
 SELECT 'a';
 SELECT 'a,b';
 SELECT 'a''b';
@@ -16,44 +16,44 @@ SELECT 'a,'',b';
 SELECT 'a '' b';
 SELECT 'a' 'b';
 SELECT 'ab';
----                     compare line 35 without space and 38 with space
+
 
 
 SELECT 'name, age,sex';
---                  NB. SELECT name, age,sex; Gives a syntax error. It only works when you have a database you want to query the fields from
---                          E.g SELECT column1, column2, ... FROM table_name; -  2.SELECT STATEMENT - AS A QUERY
+                            NB. SELECT name, age,sex; Gives a syntax error. 
+                            It only works when you have a database you want to query the fields from:
+                            E.g SELECT column1, column2, ... FROM table_name; -  2.SELECT STATEMENT - AS A QUERY
+
+
 
 SELECT 'name', 'age','sex';
-SELECT 'name,' 'age,' 'sex,';
-SELECT 'name''age''sex';
 
---                        'AS' 1.CHANGES THE NAME,UPPER and LOWER CASE OF A COLUMN FIELD and
---                             2.IT IS USED TO GIVE A COLUMN NAME.
+
 SELECT 'a' AS result;
-SELECT 'name, age,sex' AS result;
-
-SELECT 'name AS NAME, age AS AGE,sex AS SEX' ;
+SELECT 'name' AS NAME;                                          'AS'            1. IT IS USED TO GIVE A COLUMN NAME and
+                                                                
 SELECT 'name' AS NAME, 'age' AS AGE,'sex' AS SEX ;
-
-
 SELECT 'Prince' AS NAME, 'Six months' AS AGE,'Male' AS SEX ;
-SELECT 'Ogechi' AS Name, '24 years' AS Age,'FeMale' AS Sex;
+
+SELECT 'Ogechi' AS Name, '24 years' AS Age,'Female' AS Gender;                    2. CHANGES the NAME, the UPPER and the LOWER CASE OF A COLUMN FIELD
 
 
 
 
 
 
---                         2  INSERT STATEMENT 
+
+
+--                     2  INSERT STATEMENT 
                              ------------------
 -- The INSERT Synthax :       INSERT INTO DATABASE(Colunmn1,Colunmn2,Colunmn3,Colunmn4...)
 --                            VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
 
---                       3  UPDATE STATEMENT
+--                     3  UPDATE STATEMENT
 			 --------------------
 -- The UPDATE Synthax :      UPDATE DATABASE SET ADDRESS= 'WHITEWAY', ZIP='112',WHERE ID =4;
 
---                       4  DELECT STATEMENT
+--                     4  DELECT STATEMENT
                            -------------------
 -- The DELECT Synthax :       DELECT FROM DATABASE WHERE ID=5;
 
