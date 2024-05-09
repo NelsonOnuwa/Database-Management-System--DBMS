@@ -2,7 +2,7 @@ Database
 
 Database is a structure that stores information in an organized, consistent, reliable and searchable way.  It is either relational or non-relational. 
 Relational database focuses on organizing data into rows and columns within tables. E.g. MYSQL, SQL, Postgre SQL.
-Non-Relational (NOSQL) e.g. Mongo, Cassandra.
+Non-Relational (NOSQL) database e.g. Mongo, Cassandra.
 
 Fields and records makeup tables while tables make up a database.
 
