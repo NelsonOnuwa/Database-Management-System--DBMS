@@ -4,8 +4,8 @@
 
 --                          1. SELECT STATEMENT   
 			     -------------------
--- *The SELECT statement:     A.requests for data from a database(query a database- it is a query that return values) 
---					          B.prints exactly what is in the ''(quote),this creates a row.
+-- *The SELECT statement:     1. requests for data from a database(query a database- it is a query that return values) 
+--		              2. prints exactly what is in the ''(quote),this creates a row.
 --                                       n.b SELECT a; Gives a syntax error
 
 -- SELECT STATEMENT -  AS A PRINTER
