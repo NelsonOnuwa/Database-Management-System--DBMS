@@ -1,9 +1,9 @@
---								MYSQL          
-                             ----------
+--						MYSQL          
+                                            ----------
 
 
 --                          1. SELECT STATEMENT   
-							 -------------------
+			     -------------------
 -- *The SELECT statement:     A.requests for data from a database(query a database- it is a query that return values) 
 --					          B.prints exactly what is in the ''(quote),this creates a row.
 --                                       n.b SELECT a; Gives a syntax error
@@ -50,7 +50,7 @@ SELECT 'Ogechi' AS Name, '24 years' AS Age,'FeMale' AS Sex;
 --                            VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
 
 --                       3  UPDATE STATEMENT
-						  --------------------
+			 --------------------
 -- The UPDATE Synthax :      UPDATE DATABASE SET ADDRESS= 'WHITEWAY', ZIP='112',WHERE ID =4;
 
 --                       4  DELECT STATEMENT
