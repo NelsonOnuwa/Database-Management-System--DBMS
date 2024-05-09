@@ -91,21 +91,24 @@ Table names and fields should be in lower cases.
 The SELECT statement requests for data from a database (query a database- it is a query that return values) 
 It prints exactly what is in the quote(' '), this creates a row.
 
-N.b SELECT a; gives a syntax error.
-                
 
 2.  INSERT STATEMENT 
-The INSERT Syntax:             INSERT INTO DATABASE (Colunmn1, Colunmn2, Colunmn3, Colunmn4...)
-                                                VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
+
+The INSERT Syntax:              INSERT INTO DATABASE (Colunmn1, Colunmn2, Colunmn3, Colunmn4...)
+                                VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
+
 
 3.  UPDATE STATEMENT
-The UPDATE Syntax:        UPDATE DATABASE SET ADDRESS= 'WHITEWAY', ZIP='112', WHERE ID =4;
+
+The UPDATE Syntax:              UPDATE DATABASE SET ADDRESS = 'WHITEWAY', ZIP ='112', WHERE ID = 4;
+
 
 4.  DELECT STATEMENT
-The DELECT Syntax:       DELECT FROM DATABASE WHERE ID=5;
+
+The DELECT Syntax:              DELECT FROM DATABASE WHERE ID=5;
 
 
-
+See SQL statements codes...
 
 
 
