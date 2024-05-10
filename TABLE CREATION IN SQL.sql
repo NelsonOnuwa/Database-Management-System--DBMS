@@ -1,17 +1,25 @@
 CREATING A TABLE IN MYSQL
 
-A database (schema) is first created before the table is created.
-Right click on the database and click on create schema (MYSQL)
-Name the schema (MYSQL)
- You would find it below database on the left of the screen
- Click on the schema, then right click on table, click on create table
+A database schema is first created before the table is created.
+Right click on database on the left hand of MYSQL work bench and click on create schema (MYSQL)
+This creates a new_schema tab	
+Name the schema (MYSQL), click on apply and finish.
+You would find it below database on the left of the screen
+Click on the schema, then right click on table, click on create table
 A new table tab pops up
-Name the table, fill the column names and the datatypes.
-You can also select your primary key here
-Click on the table name, click on the symbol I, this opens the table. go to ddl and copy the syntax and paste to create the table.
+Name the table, fill the column names and the datatypes. You can also select your primary key here. Click on apply and finish.
+
+Click on table, click on the table name, click on the symbol i, this opens the table. 
+Go to ddl, copy the syntax and paste on a new query tab to create the table.
 
 
+To alter the schema(table), right click on the table name and click on alter table
+make the necessary changes and click on apply
+to get the current schema, click on the table name, double click on the box (note the modification on the table name, use it going forward)
+click on edit to input your data manually
 
+Synthax:
+	
 --    CREATE TABLE table_name (
 --      Column 1 datatype,
 --      Column 2 datatype,
@@ -21,6 +29,7 @@ Click on the table name, click on the symbol I, this opens the table. go to ddl 
 --     );
 
 -- The table can now be filled with data using the MYSQL INSERT INTO Statement:
+	
                INSERT INTO DATABASE (Colunmn1, Colunmn2, Colunmn3, Colunmn4)
                  VALUES ('CUPCAKE','WHITE WAY','TORONTO','ONTARIO','112');
 
