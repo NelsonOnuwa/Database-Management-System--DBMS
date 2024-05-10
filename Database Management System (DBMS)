@@ -122,7 +122,7 @@ See SQL statements codes...
 
 Schema
 
-Schema are the blue prints of databases. It shows a database design such as what tables are include in the database and any relationship btw its tables. 
+Schema are the blue prints of databases. It shows a database design such as what tables are included in the database and any relationship btw its tables. 
 It lets one know what data type each field can hold.
 
 A key is one or more columns that are identified as such in the creation of a table. 
