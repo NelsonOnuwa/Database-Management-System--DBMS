@@ -3,13 +3,12 @@
 
                      1. SELECT STATEMENT   
 			     
--- *The SELECT statement:     1. prints exactly what is in the ''(quote), this creates a row.
-                              2. requests for data from a database( Query a database- it is a query that return values) 
---		              
---                                       
+The SELECT statement:     1. prints exactly what is in the ''(quote), this creates a row.
+                          2. requests for data from a database( Query a database- it is a query that return values) 
+		              
+                                      
 
-
-SELECT STATEMENT - 1.  AS A PRINTER
+***SELECT STATEMENT - 1. AS A PRINTER
 
 SELECT 'a';
 SELECT 'a,b';
@@ -63,7 +62,7 @@ SELECT 'Ogechi' AS Name, '24 years' AS Age,'Female' AS Gender;                  
 --                       
 
 
-SELECT STATEMENT - 2.  AS A QUERY
+***SELECT STATEMENT - 2.  AS A QUERY
 
 
 --                             CLAUSES
