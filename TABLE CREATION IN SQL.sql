@@ -53,6 +53,20 @@ Synthax:
 
 
 
+CREATE TABLE `posbusiness` (
+  `id` int NOT NULL,
+  `MONTH` varchar(45) DEFAULT NULL,
+  `EXPENSE_ITEM` varchar(45) DEFAULT NULL,
+  `COST_OF_EXPENSE_ITEM` varchar(45) DEFAULT NULL,
+  `TOTAL MONTHLY SALES` varchar(45) DEFAULT NULL,
+  `TOTAL MONTHLY EXPENSE` varchar(45) DEFAULT NULL,
+  `PROFIT` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+SELECT * FROM ogenellyfamily.posbusiness;                      --- GIVES U A TABLE TO INPUT MANUALLY (NO NEED FOR INSERT STATEMENT)
+                                                                         HERE WE ARE USING BOTH THE SCHEMA NAME AND THE TABLE NAME 
+
+
 
 CREATE TABLE `umuokolie` (
   `id` int NOT NULL,
@@ -80,8 +94,8 @@ INSERT INTO  umuokolie VALUES(1,'PRINCE','MALE','29-06-2022','HUMBER_COLLEGE','S
 INSERT INTO  umuokolie VALUES(2,'OGECHI','FEMALE','05-03-1998','FEDEI_POLY','WIFE','FRIDAY');
 INSERT INTO  umuokolie VALUES(3,'NELSON','MALE','28-01-1985','UNIVERSITY_OF_JOS','HUSBAND','MONDAY');
 
-SELECT * FROM umuokolie;                                            
-
+SELECT * FROM umuokolie;                                                                       --- U HAVE TO USE INSERT STATEMENT TO INPUT DATA
+                                                                                                     HERE WE ARE USING ONLY THE TABLE NAME 
 SELECT NAME, Sex FROM Umuokolie;
 
 
