@@ -32,7 +32,7 @@ SELECT 'name', 'age','sex';
 
 
 SELECT 'a' AS result;
-SELECT 'name' AS NAME;                                          'AS'            1. IT IS USED TO GIVE A COLUMN NAME and
+SELECT 'name' AS NAME;                                          'AS'              1. IT IS USED TO GIVE A COLUMN NAME and
                                                                 
 SELECT 'name' AS NAME, 'age' AS AGE,'sex' AS SEX ;
 SELECT 'Prince' AS NAME, 'Six months' AS AGE,'Male' AS SEX ;
