@@ -63,117 +63,135 @@ CREATE TABLE `posbusiness` (
   `PROFIT` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+DESC posbusiness;
+SELECT * FROM posbusiness;                                          -- selects all the column
+
 SELECT * FROM ogenellyfamily.posbusiness;                      --- GIVES U A TABLE TO INPUT MANUALLY (NO NEED FOR INSERT STATEMENT)
                                                                          HERE WE ARE USING BOTH THE SCHEMA NAME AND THE TABLE NAME 
 
 
+-- Below is the Table syntax:
 
-CREATE TABLE `umuokolie` (
+   --             CREATE TABLE table_name (
+   --     column1 datatype constraint,
+   --     column2 datatype constraint,
+   --     column3 datatype constraint
+   -- );
+
+
+CREATE TABLE `umuogenelly` (
   `id` int NOT NULL,
-  `name` varchar(50),
-  `sex` varchar(45) NOT NULL,
-  `date_of_birth` varchar(45) NOT NULL,
-  `name_of_university` varchar(45) NOT NULL,
-  `relationship` varchar(45) NOT NULL,
-  `day_of_birth` varchar(45) NOT NULL
+  `name` varchar(45) DEFAULT NULL,
+  `sex` varchar(45) DEFAULT NULL,
+  `date_of_birth` varchar(45) DEFAULT NULL,
+  `name_of_university` varchar(45) DEFAULT NULL,
+  `realationship` varchar(45) DEFAULT NULL,
+  `day_of_birth` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 );
-DESC umuokolie;                        #shows the primary key, the column, data types
+DESC umuogenelly;                                               #shows the primary key, the column, data types
 
-
-
-CREATE TABLE `umuokolie` (
-  `id` int NOT NULL,
-  `name` varchar(50),
-  `sex` varchar(45) NOT NULL,
-  `date_of_birth` varchar(45) NOT NULL,
-  `name_of_university` varchar(45) NOT NULL,
-  `relationship` varchar(45) NOT NULL,
-  `day_of_birth` varchar(45) NOT NULL
-);
-INSERT INTO  umuokolie VALUES(1,'PRINCE','MALE','29-06-2022','HUMBER_COLLEGE','SON','THURSDAY');
-INSERT INTO  umuokolie VALUES(2,'OGECHI','FEMALE','05-03-1998','FEDEI_POLY','WIFE','FRIDAY');
-INSERT INTO  umuokolie VALUES(3,'NELSON','MALE','28-01-1985','UNIVERSITY_OF_JOS','HUSBAND','MONDAY');
-
-SELECT * FROM umuokolie;                                                                       --- U HAVE TO USE INSERT STATEMENT TO INPUT DATA
-                                                                                                     HERE WE ARE USING ONLY THE TABLE NAME 
-SELECT NAME, Sex FROM Umuokolie;
-
-
+INSERT INTO  umuogenelly VALUES(1,'PRINCE','MALE','29-06-2022','HUMBER_COLLEGE','SON','THURSDAY');
+INSERT INTO  umuogenelly VALUES(2,'OGECHI','FEMALE','05-03-1998','FEDEI_POLY','WIFE','FRIDAY');
+INSERT INTO  umuogenelly VALUES(3,'NELSON','MALE','28-01-1985','UNIVERSITY_OF_JOS','HUSBAND','MONDAY');
 
 --                           *FROM CLAUSE example
--- selecting columns
+-- Selecting columns
 
-SELECT NAME FROM umuokolie;                                   -- selects specific column(field names) from the table for all the record
-SELECT * FROM umuokolie;                                      -- selects all the column(field names) available in the table 
+SELECT NAME FROM umuogenelly;                                   -- selects specific column(field names) from the table for all the record
+SELECT NAME, Sex FROM umuogenelly;
+
+SELECT * FROM umuogenelly;                                      -- selects all the column(field names) available in the table 
+
+                                           
+
+
+
+
+
+
 
 
 --                           *WHERE CLAUSE example
 
- -- selecting specific record
-SELECT * FROM umuokolie WHERE NAME = 'NELSON';                 
-SELECT * FROM umuokolie WHERE NAME = 'PRINCE';
-SELECT * FROM umuokolie WHERE NAME = 'ogechi';
+ -- Selecting specific record
+ 
+SELECT * FROM umuogenelly WHERE NAME = 'NELSON';                 
+SELECT * FROM umuogenelly WHERE NAME = 'PRINCE';
+SELECT * FROM umuogenelly WHERE NAME = 'ogechi';
 
-SELECT * FROM umuokolie WHERE NAME = NULL;
-SELECT * FROM umuokolie WHERE NAME IS NULL;
-SELECT * FROM umuokolie WHERE NAME IS NOT NULL;
-SELECT * FROM umuokolie WHERE DATE_OF_BIRTH is null;
+SELECT * FROM umuogenelly WHERE NAME = NULL;
+SELECT * FROM umuogenelly WHERE NAME IS NULL;
+SELECT * FROM umuogenelly WHERE NAME IS NOT NULL;
+SELECT * FROM umuogenelly WHERE DATE_OF_BIRTH is null;
+
 
 --                           *ORDER BY CLAUSE example
 
-SELECT * FROM umuokolie ORDER BY NAME;
-SELECT * FROM umuokolie ORDER BY day_of_birth ;
-SELECT * FROM umuokolie ORDER BY NAME DESC;
+-- Selects the arrangement of the records alphabetically
+
+SELECT * FROM umuogenelly ORDER BY NAME;
+SELECT * FROM umuogenelly ORDER BY date_of_birth ;
+SELECT * FROM umuogenelly ORDER BY NAME DESC;
 
 
 
 
 --                           TABLE MODIFICATION
-						----------------------------
+	               ----------------------------
 
-CREATE TABLE `umuokoliefamily` (
-  `name` varchar(50) NOT NULL,
-  `surname` varchar(45) NOT NULL,
+CREATE TABLE `umuogenelly2` (
   `age` int NOT NULL,
-  `gender` varchar(45) NOT NULL
+  `name` varchar(45) DEFAULT NULL,
+  `surname` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`age`)
 );
-INSERT INTO  umuokoliefamily VALUES('PRINCE','OKOLIE', 1, 'MALE');
-INSERT INTO  umuokoliefamily VALUES('OGECHI','OKOLIE', 24, 'FEMALE');
-INSERT INTO  umuokoliefamily VALUES('NELSON','OKOLIE', 37, 'MALE');
+INSERT INTO  umuogenelly2 VALUES('2', 'PRINCE','OKOLIE', 'MALE');
+INSERT INTO  umuogenelly2 VALUES('24', 'OGECHI','OKOLIE', 'FEMALE');
+INSERT INTO  umuogenelly2 VALUES('37', 'NELSON', 'OKOLIE','M');
 
-SELECT * FROM umuokoliefamily;
+SELECT * FROM umuogenelly2;
 
-SELECT NAME FROM umuokoliefamily; 
+SELECT NAME FROM umuogenelly2; 
+SELECT SURNAME FROM umuogenelly2; 
+
 
 
 --                          A. ADDING ROWS
-                                                -----
-INSERT INTO  umuokoliefamily (NAME,surname,age,gender) VALUES ('SUNSHINE','OKOLIE','0','FEMALE');
-INSERT INTO  umuokoliefamily (NAME,surname,age,gender) VALUES ('','okolie','0','MALE');
-SELECT * FROM umuokoliefamily;
+                                 -----
+INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (1,'SUNSHINE','OKOLIE','FEMALE');
+INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (3,'notnamed','okolie','MALE');
+SELECT * FROM umuogenelly2;
 
 --                          B. ADDING COLUMNS
-                                                -------
-ALTER TABLE umuokoliefamily                                   -- nb no semicolon on the first line
+                                  -------
+ALTER TABLE umuogenelly2                                   -- nb no semicolon on the first line
 Add year_of_birth INT;
 
-SELECT * FROM umuokoliefamily;
+SELECT * FROM umuogenelly2;
 
 --                           C. DELETING COLOUMNS
 
-ALTER TABLE umuokoliefamily
-DROP COLUMN AGE;
-SELECT * FROM umuokoliefamily;
+ALTER TABLE umuogenelly2
+DROP COLUMN gender;
+SELECT * FROM umuogenelly2;
 
 --                           D. RENAMING COLUMNS
-ALTER TABLE umuokoliefamily
-RENAME COLUMN gender to sex;
-SELECT * FROM umuokoliefamily;
+ALTER TABLE umuogenelly2
+RENAME COLUMN name to afa;
+SELECT * FROM umuogenelly2;
 
 --                           E. CHANGING DATA TYPE OF COLUMNS IN A TABLE
-ALTER TABLE umuokoliefamily
-MODIFY COLUMN SEX TEXT;
-SELECT * FROM umuokoliefamily;
+ALTER TABLE umuogenelly2
+MODIFY COLUMN surname TEXT;
+SELECT * FROM umuogenelly2;
+
+
+
+
+
+
 
 
 
@@ -195,28 +213,161 @@ A primary key is also a unique constraint.
 
 
 
+--                            CONSTRAINTS
+--                         ---------------
+-- Constraints can be at column level or table level. 
+-- They are used to specify rules for the data in a table by limiting the type of data that can go into a table.
 
-                        CONSTRAINTS
-Constraints can be at column level or table level.  They are used to: 
- 1. Specify rules for the data in a table.
- 2. Limit the type of data that can go into a table.
+-- The following constraints are commonly used in SQL:
+--          1 NOT NULL - Ensures that a column cannot have a NULL value
+--          2 UNIQUE - Ensures that all values in a column are different
+--          3 PRIMARY KEY - A combination of a NOT NULL and UNIQUE. It uniquely identifies each row in a table
+--          4 FOREIGN KEY - Prevents actions that would destroy links between tables
+--          5 CHECK - Ensures that the values in a column satisfies a specific condition
+--          6 DEFAULT - Sets a default value for a column if no value is specified
+--          7 CREATE INDEX - Used to create and retrieve data from the database very quickly
 
-The following constraints are commonly used in SQL:
-1. NOT NULL - Ensures that a column cannot have a NULL value.
- 2. UNIQUE - Ensures that all values in a column are different.
- 3. PRIMARY KEY - A combination of a NOT NULL and UNIQUE. It uniquely identifies each row in a table.
-4. FOREIGN KEY - Prevents actions that would destroy links between tables.
-5. CHECK - Ensures that the values in a column satisfies a specific condition.
-6. DEFAULT - Sets a default value for a column if no value is specified.
-7. CREATE INDEX - Used to create and retrieve data from the database very quickly.
+-- Below is the constraint syntax:
 
--Below is the constraint syntax:
-                       
-CREATE TABLE table_name (
-column1 datatype constraint,
-column2 datatype constraint,
- column3 datatype constraint,
-  .... );
+   --             CREATE TABLE table_name (
+   --     column1 datatype constraint,
+   --     column2 datatype constraint,
+   --     column3 datatype constraint
+   -- );
+
+
+--                           1. NOT NULL Constraint
+--                         ------------------------------
+-- By default, a column can hold NULL values.
+-- The NOT NULL constraint enforces a column to NOT accept NULL values.
+
+-- 1. Below is a sample of a NOT NULL constaint on at table:
+
+
+CREATE TABLE `constraints` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL
+ 
+);
+SELECT * FROM constraints;
+
+--                           2. UNIQUE Constraint
+--                      -----------------------------
+-- ensures that all values in a column are different.
+-- Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column/set of columns.
+-- A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+-- UNIQUE constaint on at table:
+
+CREATE TABLE `constraints` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;
+
+
+
+
+
+-- UNIQUE constaint on a column:
+
+ALTER TABLE constraints
+ADD UNIQUE (sex);
+DESC constraints;
+
+
+
+ALTER TABLE constraints
+ADD CONSTRAINT UC_Person UNIQUE (ID,Name);
+DESC constraints;
+
+
+ALTER TABLE constraints
+DROP INDEX UC_Person;
+DESC constraints;
+
+
+
+
+--                           3. INSERTING DEFAULT VALUES
+--                         --------------------------------
+
+--      FOREIGN KEY Constraint
+--      PRIMARY KEY Constraint
+--      CHECK Constraint
+--      AUTO INCREMENT Field                                         ** SYUDY WITH W3SCHOOLS
+
+
+-- EXAMPLES
+CREATE TABLE `constraints` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL DEFAULT 'GODSTIME',
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;
+INSERT INTO  constraints VALUES ('1','sunshine','','FEMALE','humber');
+
+
+SELECT * FROM constraints;
+
+
+                                                  -- THE UNIQUE MAKES THE TABLE NOT TO HAVE REPETITIONS
+                                                  --  INSERTING 1 IN MORE THAN ONE ROW GIVES AN ERROR'Violation of UNIQUE KEY constraint' 
+                                                  -- BUT NULL VALUE IS EXEMPTED FROM THE UNIQUE CONSTRAINT; SEE BELOW
+
+
+
+
+
+
+--                               REMOVING DUPLICATES 
+                                ---------------------
+
+
+CREATE TABLE `umuokoliesfamily4` (
+  `table_1` int NOT NULL,
+  `table_2` int NOT NULL
+);                                                                 -- do not set any of the columns as a primary key else you will only have the first 5 lines
+INSERT INTO umuokoliesfamily4 VALUES('1', '1');
+INSERT INTO umuokoliesfamily4 VALUES('2', '1');
+INSERT INTO umuokoliesfamily4 VALUES('3','1');
+INSERT INTO umuokoliesfamily4 VALUES('4','1');
+INSERT INTO umuokoliesfamily4 VALUES('5','1');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+
+SELECT * FROM umuokoliesfamily4;
+
+SELECT DISTINCT  TABLE_1 FROM umuokoliesfamily4;
+
+SELECT DISTINCT  TABLE_2 FROM umuokoliesfamily4;
+
+SELECT * FROM umuokoliesfamily4;
+
+SELECT DISTINCT TABLE_1,TABLE_2 FROM umuokoliesfamily4;
+
+
+
+
+
+
 
 
 
