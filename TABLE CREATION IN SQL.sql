@@ -1,4 +1,5 @@
 CREATING A TABLE IN MYSQL
+	
 A database schema is first created before the table is created.
 
 	
@@ -20,7 +21,7 @@ TABLE CREATION PORCEDURE
 A database schema is first created before the table is created.
 Right click on database on the left hand of MYSQL work bench and click on create schema (MYSQL)
 This creates a new_schema tab	
-Name the schema (MYSQL), click on apply and finish.
+Name the schema, click on apply and finish.
 You would find it below database on the left of the screen
 Click on the schema, then right click on table, click on create table
 A new table tab pops up
