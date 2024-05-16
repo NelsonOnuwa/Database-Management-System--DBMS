@@ -165,6 +165,10 @@ INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (1,'SUNSHINE','OKOLIE
 INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (3,'notnamed','okolie','MALE');
 SELECT * FROM umuogenelly2;
 
+ -- DELETING ROWS
+
+
+
 --                          B. ADDING COLUMNS
                                   -------
 ALTER TABLE umuogenelly2                                   -- nb no semicolon on the first line
