@@ -106,6 +106,9 @@ ORDER BY column1, column2;                                          --This means
 ORDER BY column1 ASC, column2 DESC;
 
 
+SELECT * FROM umuogenelly ORDER BY day_of_birth;
+SELECT * FROM umuogenelly ORDER BY NAME DESC;
+
 
 --                       4.   'LIMIT' CLAUSE
-Find out if MYSQL uses the LIMIT Clause cos it already has a limit tab.
+SELECT * FROM umuogenelly ORDER BY NAME LIMIT 2;
