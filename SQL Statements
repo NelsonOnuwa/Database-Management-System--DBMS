@@ -82,12 +82,13 @@ SELECT * FROM okoliefamily WHERE NAME = 5                              MYSQL req
                                                                        Numeric fields should not be enclosed in quotes					
 
 
-SELECT * FROM okoliefamily WHERE NAME IS NULL;                     --  lets us add selection criteria to a statement
+SELECT * FROM okoliefamily WHERE NAME IS NULL;                        --  lets us add selection criteria to a statement
 SELECT * FROM okoliefamily WHERE DATE_OF_BIRTH IS NULL;
-SELECT * FROM okoliefamily WHERE NAME IS NOT NULL;                     NULL IS NOT A VALUE, IT IS THE ABSENCE OF A VALUE
---                                                                     e.g SELECT * FROM okoliefamily WHERE NAME = NULL; WILL NOT GIVE ANY VALUE
+SELECT * FROM okoliefamily WHERE NAME IS NOT NULL;                    
 
-; 
+--SELECT * FROM okoliefamily WHERE NAME = NULL;     WILL GIVE AN ERROR COS NULL IS NOT A VALUE, IT IS THE ABSENCE OF A VALUE.                                                                    
+
+ 
                        
 --                                                               
 --                                                  
