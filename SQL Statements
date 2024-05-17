@@ -106,9 +106,12 @@ ORDER BY column1, column2;                                          --This means
 --    OR
 ORDER BY column1 ASC, column2 DESC;
 
-
-SELECT * FROM umuogenelly ORDER BY day_of_birth;
-SELECT * FROM umuogenelly ORDER BY NAME DESC;
+SELECT * FROM umuogenelly ORDER BY NAME;
+SELECT * FROM umuogenelly ORDER BY sex DESC;
+SELECT * FROM umuogenelly ORDER BY sex ASC;
+SELECT * FROM umuogenelly ORDER BY NAME, sex;
+SELECT * FROM umuogenelly ORDER BY sex, NAME;
+SELECT * FROM umuogenelly ORDER BY sex, NAME DESC;
 
 
 --                       4.   'LIMIT' CLAUSE
