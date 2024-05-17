@@ -65,9 +65,10 @@ CREATE TABLE `posbusiness` (
   PRIMARY KEY (`id`)
 );
 DESC posbusiness;
-SELECT * FROM posbusiness;                                          -- selects all the column
 
-SELECT * FROM ogenellyfamily.posbusiness;                      --- GIVES U A TABLE TO INPUT MANUALLY (NO NEED FOR INSERT STATEMENT)
+SELECT * FROM posbusiness;                                     -- selects all the column
+
+SELECT * FROM ogenellyfamily.posbusiness;                      -- GIVES U A TABLE TO INPUT MANUALLY (NO NEED FOR INSERT STATEMENT)
                                                                          HERE WE ARE USING BOTH THE SCHEMA NAME AND THE TABLE NAME 
 
 
