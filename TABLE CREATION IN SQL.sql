@@ -96,6 +96,9 @@ INSERT INTO  umuogenelly VALUES(1,'PRINCE','MALE','29-06-2022','HUMBER_COLLEGE',
 INSERT INTO  umuogenelly VALUES(2,'OGECHI','FEMALE','05-03-1998','FEDEI_POLY','WIFE','FRIDAY');
 INSERT INTO  umuogenelly VALUES(3,'NELSON','MALE','28-01-1985','UNIVERSITY_OF_JOS','HUSBAND','MONDAY');
 
+
+
+
 --                           *FROM CLAUSE example
 -- Selecting columns
 
@@ -138,7 +141,7 @@ SELECT * FROM umuogenelly ORDER BY NAME DESC;
 
 
 
---                           TABLE MODIFICATION
+                           TABLE MODIFICATION
 	               ----------------------------
 
 CREATE TABLE `umuogenelly2` (
@@ -245,7 +248,7 @@ A primary key is also a unique constraint.
    -- );
 
 
---                           1. NOT NULL Constraint
+--                           1. NOT NULL Constraints
 --                         ------------------------------
 -- By default, a column can hold NULL values.
 -- The NOT NULL constraint enforces a column to NOT accept NULL values.
@@ -263,7 +266,7 @@ CREATE TABLE `constraints` (
 );
 SELECT * FROM constraints;
 
---                           2. UNIQUE Constraint
+--                           2. UNIQUE Constraints
 --                      -----------------------------
 -- ensures that all values in a column are different.
 -- Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column/set of columns.
@@ -288,10 +291,10 @@ DESC constraints;
 
 
 
--- UNIQUE constaint on a column:
+-- UNIQUE constaints on a column:
 -------------------------------
 
-ALTER TABLE constraints                                   To create a UNIQUE constraint on the "ID" column when the table is already created
+ALTER TABLE constraints                                   --To create a UNIQUE constraint on the "ID" column when the table is already created
 ADD UNIQUE (sex);
 DESC constraints;
 
@@ -306,8 +309,9 @@ DESC constraints;                                            (otherwise SQL Serv
 
 
 	
-                                          3. PRIMARY KEY Constraint
-	                                    -------------------------
+                        3. PRIMARY KEY Constraints
+	                 -------------------------
+
 -- PRIMARY KEY constaint on a table:
    ----------------------------------
 CREATE TABLE `constraints` (
@@ -330,23 +334,26 @@ DESC constraints;
 ALTER TABLE constaints
 ADD CONSTRAINT PK_constaint PRIMARY KEY (ID,LastName);
 
+DESC constraints;
 
 
-                                     4. FOREIGN KEY Constraint
-                                        -------------------------
+
+                         4. FOREIGN KEY Constraints
+                         -------------------------
 A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
 The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table
 
 					     
-					        ** SYUDY WITH W3SCHOOLS
+	 ** SYUDY WITH W3SCHOOLS
 					     
 					     
 					     
 					     
-				    5. DEFAULT Constraint
+			5. DEFAULT Constraints
+		           -------------------		 
 					     
 					     
-					    ** SYUDY WITH W3SCHOOLS    
+	** SYUDY WITH W3SCHOOLS    
 					     
 					     
 					     
@@ -359,7 +366,9 @@ The table with the foreign key is called the child table, and the table with the
 	
 The DROP CONSTRAINT command is used to delete a UNIQUE, PRIMARY KEY, FOREIGN KEY, or CHECK constraint.
 
---*To drop a UNIQUE(UC) constraint, 	
+
+				 To drop a UNIQUE(UC) constraints	
+				 ---------------------------------
 
 ALTER TABLE constraints                               use the following SQL
 DROP CONSTRAINT UC_constraint;
@@ -371,7 +380,8 @@ DROP INDEX UC_constraint;
 DESC constraints;
 
 
---* To drop a PRIMARY KEY(PK) constraint
+                                  To drop a PRIMARY KEY(PK) constraints
+				 --------------------------------------	  
 
 ALTER TABLE constraints                                use the following SQL
 DROP CONSTRAINT PK_constraint;
@@ -382,20 +392,24 @@ DROP PRIMARY KEY;
 
 
 
---To drop a FOREIGN KEY(FK) constraint
+                                   To drop a FOREIGN KEY(FK) constraints
+			           ---------------------------------------		   
   
-ALTER TABLE constraints                                        use the following SQL                            
+ALTER TABLE constraints                                 use the following SQL                            
 DROP CONSTRAINT FK_PersonOrder;
 
 
-ALTER TABLE Orders                                        use the following MYSQL         
+ALTER TABLE Orders                                      use the following MYSQL         
 DROP FOREIGN KEY FK_PersonOrder;
 
 
 
 
 
+                                    
+
                                      INSERTING INTO CONSTRAINTS  
+			             ---------------------------		     
 
                                       ** SYUDY WITH W3SCHOOLS
 
@@ -429,11 +443,8 @@ SELECT * FROM constraints;
 
 --                             
 
-
-
-
-DUPLICATES 
-----------
+                                           DUPLICATES 
+                                           ----------
      ** SYUDY WITH W3SCHOOLS
 	
 REMOVING DUPLICATES 
