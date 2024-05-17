@@ -163,6 +163,7 @@ SELECT SURNAME FROM umuogenelly2;
                                  -----
 INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (1,'SUNSHINE','OKOLIE','FEMALE');
 INSERT INTO  umuogenelly2 (age,name,surname,gender) VALUES (3,'notnamed','okolie','MALE');
+
 SELECT * FROM umuogenelly2;
 
  -- DELETING ROWS
@@ -180,16 +181,19 @@ SELECT * FROM umuogenelly2;
 
 ALTER TABLE umuogenelly2
 DROP COLUMN gender;
+
 SELECT * FROM umuogenelly2;
 
 --                           D. RENAMING COLUMNS
 ALTER TABLE umuogenelly2
 RENAME COLUMN name to afa;
+
 SELECT * FROM umuogenelly2;
 
 --                           E. CHANGING DATA TYPE OF COLUMNS IN A TABLE
 ALTER TABLE umuogenelly2
 MODIFY COLUMN surname TEXT;
+
 SELECT * FROM umuogenelly2;
 
 
@@ -265,7 +269,8 @@ SELECT * FROM constraints;
 -- Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column/set of columns.
 -- A PRIMARY KEY constraint automatically has a UNIQUE constraint.
 
--- UNIQUE constaint on at table:
+-- UNIQUE constaint on a table:
+--------------------------------
 
 CREATE TABLE `constraints` (
   `id` int DEFAULT NULL,
@@ -284,32 +289,115 @@ DESC constraints;
 
 
 -- UNIQUE constaint on a column:
+-------------------------------
 
-ALTER TABLE constraints
+ALTER TABLE constraints                                   To create a UNIQUE constraint on the "ID" column when the table is already created
 ADD UNIQUE (sex);
 DESC constraints;
 
 
 
-ALTER TABLE constraints
-ADD CONSTRAINT UC_Person UNIQUE (ID,Name);
+ALTER TABLE constraints                                   -- To name a UNIQUE constraint, and 
+ADD CONSTRAINT UC_constraint UNIQUE (ID,Name);               To define a UNIQUE constraint on multiple columns:
+	                                                    *The Unique constraint(UC) It is absolutely good practice to name your constraints. 
+DESC constraints;                                            (otherwise SQL Server will name them with a random name, which makes it really 
+							      difficult to upgrade more than one system with a general upgrade script).
+
+
+
+	
+                                          3. PRIMARY KEY Constraint
+	                                    -------------------------
+-- PRIMARY KEY constaint on a table:
+   ----------------------------------
+CREATE TABLE `constraints` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;	
+
+
+
+-- PRIMARY KEY constaint on a column:
+   ------------------------------------
+
+ALTER TABLE constaints
+ADD CONSTRAINT PK_constaint PRIMARY KEY (ID,LastName);
+
+
+
+                                     4. FOREIGN KEY Constraint
+                                        -------------------------
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table
+
+					     
+					        ** SYUDY WITH W3SCHOOLS
+					     
+					     
+					     
+					     
+				    5. DEFAULT Constraint
+					     
+					     
+					    ** SYUDY WITH W3SCHOOLS    
+					     
+					     
+					     
+					     
+					     
+					     
+					     
+					     DROP CONSTRAINTS
+                                            -----------------
+	
+The DROP CONSTRAINT command is used to delete a UNIQUE, PRIMARY KEY, FOREIGN KEY, or CHECK constraint.
+
+--*To drop a UNIQUE(UC) constraint, 	
+
+ALTER TABLE constraints                               use the following SQL
+DROP CONSTRAINT UC_constraint;
+
+                                           
+ALTER TABLE constraints                                use the following MYSQL            
+DROP INDEX UC_constraint;                            
+
 DESC constraints;
 
 
-ALTER TABLE constraints
-DROP INDEX UC_Person;
-DESC constraints;
+--* To drop a PRIMARY KEY(PK) constraint
+
+ALTER TABLE constraints                                use the following SQL
+DROP CONSTRAINT PK_constraint;
+
+
+ALTER TABLE constraints                                use the following MYSQL 
+DROP PRIMARY KEY;
+
+
+
+--To drop a FOREIGN KEY(FK) constraint
+  
+ALTER TABLE constraints                                        use the following SQL                            
+DROP CONSTRAINT FK_PersonOrder;
+
+
+ALTER TABLE Orders                                        use the following MYSQL         
+DROP FOREIGN KEY FK_PersonOrder;
 
 
 
 
---                           3. INSERTING DEFAULT VALUES
---                         --------------------------------
 
---      FOREIGN KEY Constraint
---      PRIMARY KEY Constraint
---      CHECK Constraint
---      AUTO INCREMENT Field                                         ** SYUDY WITH W3SCHOOLS
+                                     INSERTING INTO CONSTRAINTS  
+
+                                      ** SYUDY WITH W3SCHOOLS
 
 
 -- EXAMPLES
@@ -339,8 +427,17 @@ SELECT * FROM constraints;
 
 
 
---                               REMOVING DUPLICATES 
-                                ---------------------
+--                             
+
+
+
+
+DUPLICATES 
+----------
+     ** SYUDY WITH W3SCHOOLS
+	
+REMOVING DUPLICATES 
+
 
 
 CREATE TABLE `umuokoliesfamily4` (
