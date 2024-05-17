@@ -235,8 +235,8 @@ A primary key is also a unique constraint.
 --          2 UNIQUE - Ensures that all values in a column are different
 --          3 PRIMARY KEY - A combination of a NOT NULL and UNIQUE. It uniquely identifies each row in a table
 --          4 FOREIGN KEY - Prevents actions that would destroy links between tables
---          5 CHECK - Ensures that the values in a column satisfies a specific condition
---          6 DEFAULT - Sets a default value for a column if no value is specified
+--          5 DEFAULT - Sets a default value for a column if no value is specified
+--	    6 CHECK - Ensures that the values in a column satisfies a specific condition
 --          7 CREATE INDEX - Used to create and retrieve data from the database very quickly
 
 -- Below is the constraint syntax:
