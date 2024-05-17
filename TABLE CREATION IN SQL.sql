@@ -324,7 +324,7 @@ CREATE TABLE `constraints` (
 );
 
 DESC constraints;
-INSERT INTO  constraints VALUES ('1','sunshine','','FEMALE','humber');
+INSERT INTO  constraints VALUES ('1','sunshine','FEMALE','humber');
 
 
 SELECT * FROM constraints;
