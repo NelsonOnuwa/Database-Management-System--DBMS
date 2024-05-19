@@ -7,3 +7,7 @@ RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched re
 FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
 SQL INNER JOIN  SQL LEFT JOIN  SQL RIGHT JOIN  SQL FULL OUTER JOIN
 
+** SEE w3schools.com 4 Visuals
+
+
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
