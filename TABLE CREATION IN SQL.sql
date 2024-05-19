@@ -258,7 +258,7 @@ A primary key is also a unique constraint.
 
 
 CREATE TABLE `constraints` (
-  `id` int DEFAULT NULL,
+  `id` int NULL,
   `name` varchar(45) NOT NULL,
   `date_of_birth` varchar(45) NOT NULL,
   `sex` varchar(45) NOT NULL,
@@ -277,7 +277,7 @@ SELECT * FROM constraints;
 --------------------------------
 
 CREATE TABLE `constraints` (
-  `id` int DEFAULT NULL,
+  `id` int NULL,
   `name` varchar(45) NOT NULL,
   `date_of_birth` varchar(45) NOT NULL,
   `sex` varchar(45) NOT NULL,
@@ -316,7 +316,7 @@ DESC constraints;                                            (otherwise SQL Serv
 -- PRIMARY KEY constaint on a table:
    ----------------------------------
 CREATE TABLE `constraints` (
-  `id` int DEFAULT NULL,
+  `id` int NULL,
   `name` varchar(45) NOT NULL,
   `date_of_birth` varchar(45) NOT NULL,
   `sex` varchar(45) NOT NULL,
@@ -344,18 +344,35 @@ DESC constraints;
 A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
 The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table
 
-					     
-	 ** SYUDY WITH W3SCHOOLS
+
+				 ** SYUDY WITH W3SCHOOLS
 					     
 					     
 					     
 					     
 			5. DEFAULT Constraints
 		           -------------------		 
-					     
-					     
-	** SYUDY WITH W3SCHOOLS    
-					     
+The DEFAULT constraint is used to set a default value for a column, if no other value is specified.
+
+
+CREATE TABLE `constraints` (
+  `id` int NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45)  DEFAULT 'University of ESSEX'
+ 
+);
+
+To create a DEFAULT constraint on the "name_of_university" column when the table is already created, use the following MYSQL:
+
+ALTER TABLE constraints
+ALTER name_of_university SET DEFAULT 'University of ESSEX';
+
+
+
+
+		     
 					     
 					     
 					     
@@ -365,7 +382,7 @@ The table with the foreign key is called the child table, and the table with the
 					     DROP CONSTRAINTS
                                             -----------------
 	
-The DROP CONSTRAINT command is used to delete a UNIQUE, PRIMARY KEY, FOREIGN KEY, or CHECK constraint.
+The DROP CONSTRAINT command is used to delete a UNIQUE, PRIMARY KEY, FOREIGN KEY,DEFAULT or CHECK constraint.
 
 
 				 To drop a UNIQUE(UC) constraints	
@@ -384,10 +401,6 @@ DESC constraints;
                                   To drop a PRIMARY KEY(PK) constraints
 				 --------------------------------------	  
 
-ALTER TABLE constraints                                use the following SQL
-DROP CONSTRAINT PK_constraint;
-
-
 ALTER TABLE constraints                                use the following MYSQL 
 DROP PRIMARY KEY;
 
@@ -396,14 +409,17 @@ DROP PRIMARY KEY;
                                    To drop a FOREIGN KEY(FK) constraints
 			           ---------------------------------------		   
   
-ALTER TABLE constraints                                 use the following SQL                            
-DROP CONSTRAINT FK_PersonOrder;
-
 
 ALTER TABLE Orders                                      use the following MYSQL         
 DROP FOREIGN KEY FK_PersonOrder;
 
+                                     
+                                       
 
+                                         To drop a DEFAULT constraint:
+
+ALTER TABLE constraints
+ALTER name_of_university DROP DEFAULT;
 
 
 
@@ -433,9 +449,9 @@ INSERT INTO  constraints VALUES ('1','sunshine','FEMALE','humber');
 SELECT * FROM constraints;
 
 
-                                                  -- THE UNIQUE MAKES THE TABLE NOT TO HAVE REPETITIONS
-                                                  --  INSERTING 1 IN MORE THAN ONE ROW GIVES AN ERROR'Violation of UNIQUE KEY constraint' 
-                                                  -- BUT NULL VALUE IS EXEMPTED FROM THE UNIQUE CONSTRAINT; SEE BELOW
+                                                  --   THE UNIQUE MAKES THE TABLE NOT TO HAVE REPETITIONS
+                                                  --   INSERTING 1 IN MORE THAN ONE ROW GIVES AN ERROR'Violation of UNIQUE KEY constraint' 
+                                                  --   BUT NULL VALUE IS EXEMPTED FROM THE UNIQUE CONSTRAINT; SEE BELOW
 
 
 
@@ -448,7 +464,9 @@ SELECT * FROM constraints;
                                            ----------
      ** SYUDY WITH W3SCHOOLS
 	
-REMOVING DUPLICATES 
+
+						   
+				      REMOVING DUPLICATES 
 
 
 
