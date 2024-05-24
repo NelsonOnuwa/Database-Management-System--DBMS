@@ -28,7 +28,7 @@ ON table1.column_name = table2.column_name;
 INNER JOIN USING OUR EVANS CYCLE TABLE
 
 CREATE TABLE `customers` (
-  `customer_id` int NOT NULL,
+  `id` int NOT NULL,
   `first_name` varchar(45) NOT NULL,
   `last_name` varchar(45) NOT NULL,
   `phone_number` varchar(45) NOT NULL,
@@ -39,6 +39,10 @@ CREATE TABLE `customers` (
   UNIQUE KEY `email_UNIQUE` (`email`)
 );
 DESC customers;
+
+ALTER TABLE customers
+RENAME COLUMN id to customer_id;
+
 INSERT INTO  customers VALUES(1,'PRINCE','OKOLIE','07036126160','PINO@YAHOO.CA','JOS','KASHIM IBRAHIM');
 
 SELECT * FROM  customers;
@@ -59,7 +63,11 @@ DESC orders;
 INSERT INTO  orders VALUES(1,'READY','2024-05-24','2024-05-25','2024-05-25','23','945','1');
 SELECT * FROM  orders;
 
-SELECT first_name,last_name,phone_number,order_id,order_status,order_date
-FROM customers
+SELECT first_name,last_name,phone_number,order_id,order_status,order_date FROM customers
+INNER JOIN orders
+ON customers.customer_id = orders.customer_id;
+
+
+SELECT * FROM customers
 INNER JOIN orders
 ON customers.customer_id = orders.customer_id;
