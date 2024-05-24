@@ -1,9 +1,11 @@
-CREATING A TABLE IN MYSQL
+                 CREATING A TABLE IN MYSQL
+	  --------------------------------------------		 
 	
 A database schema is first created before the table is created.
 
 	
 Schema
+---------
 
 Schema are the blue prints of databases. It shows a database design such as what tables are included in the database and any relationship btw its tables. 
 It lets one know what data type each field can hold.
@@ -16,7 +18,8 @@ Foreign key is a column or group of columns in a relational database table that 
 
 
 	
-TABLE CREATION PORCEDURE
+                         TABLE CREATION PORCEDURE
+	           -------------------------------------
 	
 A database schema is first created before the table is created.
 Right click on database on the left hand of MYSQL work bench and click on create schema (MYSQL)
@@ -100,7 +103,21 @@ INSERT INTO  umuogenelly VALUES(3,'NELSON','MALE','28-01-1985','UNIVERSITY_OF_JO
 
 
 
---                           *FROM CLAUSE example
+
+
+
+
+
+
+
+
+                                   CLAUSES
+			----------------------------		   
+			   		   
+
+--                           FROM CLAUSE example
+                            ----------------------			   
+
 -- Selecting columns
 
 SELECT NAME FROM umuogenelly;                                   -- selects specific column(field names) from the table for all the record
@@ -112,12 +129,8 @@ SELECT * FROM umuogenelly;                                      -- selects all t
 
 
 
-
-
-
-
-
---                           *WHERE CLAUSE example
+--                           WHERE CLAUSE example
+                    -------------------------------------
 
  -- Selecting specific record
  
@@ -131,13 +144,22 @@ SELECT * FROM umuogenelly WHERE NAME IS NOT NULL;
 SELECT * FROM umuogenelly WHERE DATE_OF_BIRTH is null;
 
 
+
+
 --                           *ORDER BY CLAUSE example
+                          ---------------------------------
 
 -- Selects the arrangement of the records alphabetically
 
 SELECT * FROM umuogenelly ORDER BY NAME;
 SELECT * FROM umuogenelly ORDER BY date_of_birth ;
 SELECT * FROM umuogenelly ORDER BY NAME DESC;
+
+
+
+
+
+
 
 
 
