@@ -189,12 +189,19 @@ DROP COLUMN gender;
 SELECT * FROM umuogenelly2;
 
 --                           D. RENAMING COLUMNS
+Syntax:
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+
 ALTER TABLE umuogenelly2
 RENAME COLUMN name to afa;
 
 SELECT * FROM umuogenelly2;
 
---                           E. CHANGING DATA TYPE OF COLUMNS IN A TABLE
+--                          
+
+                                E. CHANGING DATA TYPE OF COLUMNS IN A TABLE
 ALTER TABLE umuogenelly2
 MODIFY COLUMN surname TEXT;
 
