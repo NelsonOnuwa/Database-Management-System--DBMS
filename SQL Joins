@@ -16,6 +16,7 @@ SQL INNER JOIN  SQL LEFT JOIN  SQL RIGHT JOIN  SQL FULL OUTER JOIN
 
 (INNER) JOIN
 Returns records that have matching values in both tables
+Also referred to as just JOIN.
 
 Syntax:
 
@@ -25,7 +26,9 @@ INNER JOIN table2
 ON table1.column_name = table2.column_name;
 
 
-INNER JOIN USING OUR EVANS CYCLE TABLE
+INNER JOIN USING TWO(2) EVANS CYCLE TABLE
+
+
 
 CREATE TABLE `customers` (
   `id` int NOT NULL,
@@ -78,3 +81,7 @@ It is a good practice to include the table name when specifying columns in the S
 SELECT customers.first_name,customers.last_name,customers.phone_number,orders.order_id,orders.order_status,orders.order_date FROM customers
 INNER JOIN orders
 ON customers.customer_id = orders.customer_id;
+
+
+
+INNER JOIN USING THREE(3) EVANS CYCLE TABLE
