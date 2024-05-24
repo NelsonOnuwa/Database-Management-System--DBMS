@@ -1,0 +1,35 @@
+    EVANS CYCLE LOGICAL DATABASE CREATION
+---------------------------------------------	
+
+CREATE TABLE `customers` (
+  `customer_id` int NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `phone_number` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `street` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+);
+DESC customers;
+INSERT INTO  customers VALUES(1,'PRINCE','OKOLIE','07036126160','PINO@YAHOO.CA','JOS','KASHIM IBRAHIM');
+
+SELECT * FROM  customers;
+
+
+
+CREATE TABLE `orders` (
+  `customer_id` int NOT NULL,
+  `order_status` varchar(45) DEFAULT NULL,
+  `order_date` varchar(45) DEFAULT NULL,
+  `required_date` varchar(45) DEFAULT NULL,
+  `shipped_date` varchar(45) DEFAULT NULL,
+  `store_id` varchar(45) DEFAULT NULL,
+  `staff_id` varchar(45) DEFAULT NULL,
+  `order_id` varchar(45) NOT NULL,
+  PRIMARY KEY (`order_id`)
+);
+DESC orders;
+INSERT INTO  orders VALUES(1,'READY','2024-05-24','2024-05-25','2024-05-25','23','945','1');
+SELECT * FROM  orders;
