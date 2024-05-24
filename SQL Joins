@@ -1,10 +1,12 @@
 
-SQL JOINs
+                                          SQL JOINs
+                                        ---------------
 
 A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
 
 
 Different Types of SQL JOINs
+----------------------------
 (INNER) JOIN: 
 LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
 RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
@@ -15,6 +17,7 @@ SQL INNER JOIN  SQL LEFT JOIN  SQL RIGHT JOIN  SQL FULL OUTER JOIN
 
 
 (INNER) JOIN
+-------------
 Returns records that have matching values in both tables
 Also referred to as just JOIN.
 
@@ -26,9 +29,10 @@ INNER JOIN table2
 ON table1.column_name = table2.column_name;
 
 
-INNER JOIN USING TWO(2) EVANS CYCLE TABLE
 
 
+INNER JOIN USING TWO(2) EVANS CYCLE TABLES
+-------------------------------------------
 
 CREATE TABLE `customers` (
   `id` int NOT NULL,
@@ -84,4 +88,5 @@ ON customers.customer_id = orders.customer_id;
 
 
 
-INNER JOIN USING THREE(3) EVANS CYCLE TABLE
+INNER JOIN USING THREE(3) EVANS CYCLE TABLES
+---------------------------------------------
