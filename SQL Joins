@@ -63,11 +63,18 @@ DESC orders;
 INSERT INTO  orders VALUES(1,'READY','2024-05-24','2024-05-25','2024-05-25','23','945','1');
 SELECT * FROM  orders;
 
-SELECT first_name,last_name,phone_number,order_id,order_status,order_date FROM customers
+
+
+SELECT * FROM customers
 INNER JOIN orders
 ON customers.customer_id = orders.customer_id;
 
 
-SELECT * FROM customers
+SELECT first_name,last_name,phone_number,order_id,order_status,order_date FROM customers
+INNER JOIN orders
+ON customers.customer_id = orders.customer_id;
+
+It is a good practice to include the table name when specifying columns in the SQL statement:
+SELECT customers.first_name,customers.last_name,customers.phone_number,orders.order_id,orders.order_status,orders.order_date FROM customers
 INNER JOIN orders
 ON customers.customer_id = orders.customer_id;
