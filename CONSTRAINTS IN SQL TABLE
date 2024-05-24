@@ -1,0 +1,294 @@
+--                            CONSTRAINTS
+--                         ---------------
+-- Constraints can be at column level or table level. 
+-- They are used to specify rules for the data in a table by limiting the type of data that can go into a table.
+
+-- The following constraints are commonly used in SQL:
+--          1 NOT NULL - Ensures that a column cannot have a NULL value
+--          2 UNIQUE - Ensures that all values in a column are different
+--          3 PRIMARY KEY - A combination of a NOT NULL and UNIQUE. It uniquely identifies each row in a table
+--          4 FOREIGN KEY - Prevents actions that would destroy links between tables
+--          5 DEFAULT - Sets a default value for a column if no value is specified
+--	    6 CHECK - Ensures that the values in a column satisfies a specific condition
+--          7 CREATE INDEX - Used to create and retrieve data from the database very quickly
+
+-- Below is the constraint syntax:
+
+   --             CREATE TABLE table_name (
+   --     column1 datatype constraint,
+   --     column2 datatype constraint,
+   --     column3 datatype constraint
+   -- );
+
+
+Primary Key	                                                                         Foreign Key
+A primary key is used to ensure data in the specific column is unique.       	A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.
+It does not allow NULL values.		                                        It can also contain NULL values.
+Its value cannot be deleted from the parent table.	                        Its value can be deleted from the child table
+It uniquely identifies a record in the relational database table.	        It refers to the field in a table, which is the primary key of another table.
+	
+
+
+Unique key
+A primary key is also a unique constraint.
+
+
+--                           1. NOT NULL Constraints
+--                         ------------------------------
+-- By default, a column can hold NULL values.
+-- The NOT NULL constraint enforces a column to NOT accept NULL values.
+
+-- 1. Below is a sample of a NOT NULL constaint on at table:
+
+
+CREATE TABLE `constraints` (
+  `id` int NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL
+ 
+);
+SELECT * FROM constraints;
+
+--                           2. UNIQUE Constraints
+--                      -----------------------------
+-- ensures that all values in a column are different.
+-- Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column/set of columns.
+-- A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+-- UNIQUE constaint on a table:
+--------------------------------
+
+CREATE TABLE `constraints` (
+  `id` int NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;
+
+
+
+
+
+-- UNIQUE constaints on a column:
+-------------------------------
+
+ALTER TABLE constraints                                   --To create a UNIQUE constraint on the "ID" column when the table is already created
+ADD UNIQUE (sex);
+DESC constraints;
+
+
+
+ALTER TABLE constraints                                   -- To name a UNIQUE constraint, and 
+ADD CONSTRAINT UC_constraint UNIQUE (ID,Name);               To define a UNIQUE constraint on multiple columns:
+	                                                    *The Unique constraint(UC) It is absolutely good practice to name your constraints. 
+DESC constraints;                                            (otherwise SQL Server will name them with a random name, which makes it really 
+							      difficult to upgrade more than one system with a general upgrade script).
+
+
+
+	
+                        3. PRIMARY KEY Constraints
+	                 -------------------------
+
+-- PRIMARY KEY constaint on a table:
+   ----------------------------------
+CREATE TABLE `constraints` (
+  `id` int NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;	
+
+
+
+-- PRIMARY KEY constaint on a column:
+   ------------------------------------
+
+ALTER TABLE constaints
+ADD CONSTRAINT PK_constaint PRIMARY KEY (ID,LastName);
+
+DESC constraints;
+
+
+
+                         4. FOREIGN KEY Constraints
+                         -------------------------
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table
+
+
+				 ** SYUDY WITH W3SCHOOLS
+					     
+					     
+					     
+					     
+			5. DEFAULT Constraints
+		           -------------------		 
+The DEFAULT constraint is used to set a default value for a column, if no other value is specified.
+
+
+CREATE TABLE `constraints` (
+  `id` int NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45)  DEFAULT 'University of ESSEX'
+ 
+);
+
+To create a DEFAULT constraint on the "name_of_university" column when the table is already created, use the following MYSQL:
+
+ALTER TABLE constraints
+ALTER name_of_university SET DEFAULT 'University of ESSEX';
+
+
+
+
+		     
+					     
+					     
+					     
+					     
+					     
+					     
+					     DROP CONSTRAINTS
+                                            -----------------
+	
+The DROP CONSTRAINT command is used to delete a UNIQUE, PRIMARY KEY, FOREIGN KEY,DEFAULT or CHECK constraint.
+
+
+				 To drop a UNIQUE(UC) constraints	
+				 ---------------------------------
+
+ALTER TABLE constraints                               use the following SQL
+DROP CONSTRAINT UC_constraint;
+
+                                           
+ALTER TABLE constraints                                use the following MYSQL            
+DROP INDEX UC_constraint;                            
+
+DESC constraints;
+
+
+                                  To drop a PRIMARY KEY(PK) constraints
+				 --------------------------------------	  
+
+ALTER TABLE constraints                                use the following MYSQL 
+DROP PRIMARY KEY;
+
+
+
+                                   To drop a FOREIGN KEY(FK) constraints
+			           ---------------------------------------		   
+  
+
+ALTER TABLE Orders                                      use the following MYSQL         
+DROP FOREIGN KEY FK_PersonOrder;
+
+                                     
+                                       
+
+                                         To drop a DEFAULT constraint:
+
+ALTER TABLE constraints
+ALTER name_of_university DROP DEFAULT;
+
+
+
+                                    
+
+                                     INSERTING INTO CONSTRAINTS  
+			             ---------------------------		     
+
+                                      ** SYUDY WITH W3SCHOOLS
+
+
+-- EXAMPLES
+CREATE TABLE `constraints` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `date_of_birth` varchar(45) NOT NULL DEFAULT 'GODSTIME',
+  `sex` varchar(45) NOT NULL,
+  `name_of_university` varchar(45) NOT NULL,
+  PRIMARY KEY (`name`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+);
+
+DESC constraints;
+INSERT INTO  constraints VALUES ('1','sunshine','FEMALE','humber');
+
+
+SELECT * FROM constraints;
+
+
+                                                  --   THE UNIQUE MAKES THE TABLE NOT TO HAVE REPETITIONS
+                                                  --   INSERTING 1 IN MORE THAN ONE ROW GIVES AN ERROR'Violation of UNIQUE KEY constraint' 
+                                                  --   BUT NULL VALUE IS EXEMPTED FROM THE UNIQUE CONSTRAINT; SEE BELOW
+
+
+
+
+
+
+--                             
+
+                                           DUPLICATES 
+                                           ----------
+     ** SYUDY WITH W3SCHOOLS
+	
+
+						   
+				      REMOVING DUPLICATES 
+
+
+
+CREATE TABLE `umuokoliesfamily4` (
+  `table_1` int NOT NULL,
+  `table_2` int NOT NULL
+);                                                                 -- do not set any of the columns as a primary key else you will only have the first 5 lines
+INSERT INTO umuokoliesfamily4 VALUES('1', '1');
+INSERT INTO umuokoliesfamily4 VALUES('2', '1');
+INSERT INTO umuokoliesfamily4 VALUES('3','1');
+INSERT INTO umuokoliesfamily4 VALUES('4','1');
+INSERT INTO umuokoliesfamily4 VALUES('5','1');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+INSERT INTO umuokoliesfamily4 VALUES('1','2');
+
+SELECT * FROM umuokoliesfamily4;
+
+SELECT DISTINCT  TABLE_1 FROM umuokoliesfamily4;
+
+SELECT DISTINCT  TABLE_2 FROM umuokoliesfamily4;
+
+SELECT * FROM umuokoliesfamily4;
+
+SELECT DISTINCT TABLE_1,TABLE_2 FROM umuokoliesfamily4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
