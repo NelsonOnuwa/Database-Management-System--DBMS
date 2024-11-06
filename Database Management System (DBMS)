@@ -12,7 +12,7 @@ Id	Name	City	State	zip
 2	Ogechi	Obazu	Imo	234
 3	Cupcake (Ikechukwu)	Ibusa	delta	234
                             
-A relational database with one table and three(3) Records 
+This is a relational database with one table and three(3) Records 
 
 Fields (Column): maintains specific information about every record in a table
 Record (Row): each individual entry that exists in a table
